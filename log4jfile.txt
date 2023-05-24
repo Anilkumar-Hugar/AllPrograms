@@ -1,0 +1,14 @@
+status = trace 
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = %d %t %m %n
+ 
+rootLogger = trace, STDOUT
+ 
+# or using a grouping element:
+# rootLogger.level = info
+# rootLogger.appenderRef.stdout.ref = STDOUT
+
+
+==================================================================================================

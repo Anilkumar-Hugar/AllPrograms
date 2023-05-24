@@ -1,0 +1,20 @@
+1 Inner member annotations
+2 @Getter
+3 @Setter
+4 @NonNull
+5 @With
+ Method level Annotations
+6 @Synchronized
+7 @SneakyThrows
+ Class level annotations
+8 @Getter
+9 @Setter
+10 @NoArgsConstructor
+11 @AllArgsConstructor
+12 @RequiredArgsConstructor
+13 @Builder
+14 @Singular with @Builder
+15 @ToString
+16 @EqualsAndHashCode
+17 @Data
+ 

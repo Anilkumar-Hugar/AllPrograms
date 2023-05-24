@@ -1,0 +1,2 @@
+we can map multiple methods in single servlet class
+@WebServlet(urlPatterns={"/login","/display"})

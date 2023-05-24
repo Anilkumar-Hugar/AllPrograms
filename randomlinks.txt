@@ -1,0 +1,23 @@
+We can create threads using 3 ways
+  -using thread
+  -using runnable class
+  -using lamda expressions.
+
+
+
+
+salesql.com
+
+
+
+////	@ManyToMany(cascade = CascadeType.ALL)
+//	@ElementCollection
+//	@CollectionTable(name = "role", joinColumns = @JoinColumn(name = "id"))
+
+
+
+if (user == null) {
+			throw new UsernameNotFoundException("User Not Found In The DataBase");
+		}
+		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+				user.getRoles());

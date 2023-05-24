@@ -1,0 +1,5 @@
+Authentication types:
+=====================
+ObjectBased Security
+method level security
+Annotation level security

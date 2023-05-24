@@ -1,0 +1,37 @@
+AOP
+Collection
+Controller
+Singleton
+String program
+IOC
+Transactional
+
+==========================================================
+TASKS:
+------
+17/04/2023
+===========
+Singleton class,DBConnection using factory method,Immutable class.
+
+18/04/2023
+==========
+ThreadPool,prgm using Thread/Runnable,Blocking Queue,Finding leaf nodes
+
+20/04/2023
+============
+convert millsec to UTC and Date to UTC,write and read locking in threads,URL reading and printing no count.
+
+
+
+
+
+
+
+
+
+
+Predicate<Integer> predicate=(t)->{
+			if(t%2==0)return true;
+			else return false;
+		};
+		System.out.println(predicate.test(7));

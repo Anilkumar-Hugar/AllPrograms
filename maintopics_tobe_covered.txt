@@ -1,0 +1,25 @@
+Please confirm whether you guys covered below concepts, if not go through them Will give assessment on them
+
+1. Authentication (Spring security)
+2. Authorization (Spring security)
+3. Data schema changes (Liquibase)
+4. CORS (Global Cors configuration)
+5. CSRF (Depending project needs)
+6. Lint tools (Sonarqube, checkstyle)
+7. Junit test case
+8. code coverage tools
+9. Integrate Lint and code coverage tools as part of Build (Gradle)
+10. JPA/DB (versioning, Transactions and other best concepts depending on project needs)
+11. Scheduling (Spring boot/Quartz depending on needs)
+12. Internationalization
+13. Validations
+14. Spring properties externalizations
+15. Caching
+
+ 
+
+Java concepts
+1. Streams
+2. Executor framework
+3. Functional interfaces, Lambda
+4. Method references

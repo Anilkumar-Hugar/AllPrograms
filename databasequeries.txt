@@ -1,0 +1,70 @@
+create table student(name text,phone bigint,email text,address char(50),course text,password text);
+
+foreign key setting:
+========================
+CREATE TABLE contacts(
+   contact_id INT GENERATED ALWAYS AS IDENTITY,
+   customer_id INT,
+   contact_name VARCHAR(255) NOT NULL,
+   phone VARCHAR(15),
+   email VARCHAR(100),
+   PRIMARY KEY(contact_id),
+   CONSTRAINT fk_customer
+      FOREIGN KEY(customer_id) 
+	  REFERENCES customers(customer_id)
+);
+
+-----------------------------------------------
+ALTER TABLE Company ADD CONSTRAINT fk_Clients    
+FOREIGN KEY ( Company_Id )REFERENCES Clients(Client_ID)   
+ON DELETE CASCADE   
+ON UPDATE RESTRICT;    
+
+ALTER TABLE product ADD CONSTRAINT brand_id    
+FOREIGN KEY (brand_id )REFERENCES brand(brand_id)   
+ON DELETE CASCADE   
+ON UPDATE RESTRICT; 
+
+========================================================================================================================================================
+
+product table:
+===================
+create table product (id integer not null,product_code integer not null,category_id integer not null,price float,name varchar,
+displayname varchar,img_url varchar,brand_id integer not null, primary key(id));
+
+category table:
+===================
+create table category (category_id integer not null,name varchar,
+displayname varchar,decription bytea, primary key(category_id));
+
+Attributes table:
+===================
+create table Attriubte (attribute_id integer not null,product_code integer,key varchar,value varchar, primary key(attribute_id));
+
+brand table:
+===================
+
+create table brand (brand_id integer not null,name varchar,display_name varchar, primary key(brand_id));
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+how to add the whole file into the database:
+=============================================
+COPY emp
+FROM 'C:\docs/table.txt' 
+DELIMITER ',' 
+CSV HEADER;
+
+
+
+
+
+

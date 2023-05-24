@@ -1,0 +1,86 @@
+count(): long
+
+returns the number of entities available.
+
+delete(Employee entity):
+deleteAll():
+deleteAll(Iterable< extends Employee > entities):
+deleteAll(Iterable< extends Integer > ids):
+existsById(Integer id):
+findAll():return iterable	
+findAllByIds(Iterable< Integer > ids):returns iterable
+findById(Integer id):returns object/entity
+save(Employee entity):
+saveAll(Iterable< Employee> entities): returns updated entities in iterable
+
+
+
+
+
+===============================================================================================================================
+
+JPA ANNOTATIONS:
+===============
+For unique values for particular column:  @Table(name="emp" ,uniqueConstraints=@UniqueConstraint(columnNames = { "empno" }))
+simple primary key @Id and composite one is @EmbededId
+@PersistenceContext
+
+Criteria queries:(Class level annotations)
+=================
+EntityManager em = Persistance.createEntityManagerFactory();
+CriteriaBuilder cb = em.getCriteriaBuilder();
+CriteriaQuery<Pet> cq = cb.createQuery(Pet.class);
+Root<Pet> pet = cq.from(Pet.class);
+cq.select(pet);
+TypedQuery<Pet> q = em.createQuery(cq);
+List<Pet> allPets = q.getResultList();
+
+
+To get entity type for the above query:
+=======================================
+EntityManager em = Persistance.createEntityManagerFactory();
+MetaModel m=em.getMetaModel();
+EntityType<Pet> entity=m.entity(Pet.class);
+-------------------------------------------------------
+metamodel queries:
+==================
+@StaticMetamodel(Employee.class)
+@Entity
+public class Pet {
+  @Id
+  protected Long id;
+  protected String name;
+  protected String color;
+  @ManyToOne
+  protected Set<Owner> owners;
+  ...
+}
+
+The corresponding Metamodel class is:
+------------------------------------
+package com.example;
+@Static Metamodel(Pet.class)
+public class Pet_ {
+  
+  public static volatile SingularAttribute<Pet, Long> id;
+  public static volatile SingularAttribute<Pet, String> name;
+  public static volatile SingularAttribute<Pet, String> color;
+  public static volatile SetAttribute<Pet, Owner> owners;
+}
+
+-------------------------------------------------------------------
+navigable critaria queries:
+===========================
+CriteriaQuery<String> cq = cb.createQuery(String.class);
+Root<Pet> pet = cq.from(Pet.class);
+cq.select(pet.get(Pet_.name));
+
+String based query:
+===================
+CriteriaQuery<Pet> cq = cb.createQuery(Pet.class);
+Root<Pet> pet = cq.from(Pet.class);
+cq.where(cb.equal(pet.get("name"), "Fido"));
+
+
+
+

@@ -1,0 +1,3 @@
+empno,empname,emp_role,empsal
+"a124","anilkumar","SSE",12000
+"a125","shubham","ASE",15000

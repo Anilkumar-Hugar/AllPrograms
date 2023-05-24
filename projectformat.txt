@@ -1,0 +1,27 @@
+Log4j
+maven
+singletone design pattern
+no single letter var, no printstacktrace,meaning full methods and variables
+lombok in java
+use http methods for crud operations
+use one dao for all database operations
+
+
+---------------------------------------------------------------------------------
+reactive programming
+
+
+=========================================================================================
+========extra========
+mermaid chart
+c4 model
+auto scaling
+system design
+kafka
+
+deployment
+webflux
+===========
+1. CI/CD
+2. deployment methods
+

@@ -1,0 +1,40 @@
+Transactional management methods
+====================================
+There are 2 interfaces --> PlatformTransactionManager which work on imperative transaction mangement 
+                       --> ReactiveTRansactionManager which work on reactive transaction management
+                          above both should extend TransactionManager to work 
+
+methods from TransactionStatus interface
+========================================
+boolean isNewTransaction();
+boolean hasSavepoint();
+void setRollbackOnly();
+boolean isRollbackOnly();
+void flush();
+boolean isCompleted();
+
+
+
+power,persona,prevention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

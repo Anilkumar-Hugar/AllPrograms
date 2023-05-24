@@ -1,0 +1,10 @@
+git init- to create the local repository
+git add- to add the files to the local repository
+git status- to check whether the file is added to the local repo or not
+git commit -m "message"-to commit the file to the commit area remote repository
+git log-to check the current branch and check commited files
+git add .-to go back to the commit
+
+git branch<branchName>-to create branch from last commit
+git checkout develop- this command will switch current branch to develop
+git merge develop- to merge 2 branches

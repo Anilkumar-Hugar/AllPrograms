@@ -1,0 +1,32 @@
+Consumer command:
+    kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic java --from-beginning
+
+Producer Command:
+    kafka-console-producer.bat --broker-list localhost:9092 --topic topicname
+
+
+List Topics:
+   kafka-topics.bat --list --zookeeper localhost:2181 
+
+Describe Topic: 
+   kafka-topics.bat --describe --zookeeper localhost:2181 --topic [Topic Name]
+
+Read messages from the beginning:
+Before version < 2.0: 
+   kafka-console-consumer.bat --zookeeper localhost:2181 --topic [Topic Name] --from-beginning
+
+After version > 2.0: 
+   kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic [Topic Name] --from-beginning
+
+Delete Topic: 
+   kafka-run-class.bat kafka.admin.TopicCommand --delete --topic [topic_to_delete] --zookeeper localhost:2181
+
+
+Consumer command:
+ 
+   .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topicName --from-Beginning
+
+
+to run zookeeper:
+
+   .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties

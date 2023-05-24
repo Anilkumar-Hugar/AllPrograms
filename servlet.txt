@@ -1,0 +1,41 @@
+Request Object in servlet
+============================
+1.getParameter() =>return type is Object
+2.getParameterValues() =>return type is String array
+3.getParameterMap() =>return type is map
+4.getParameterNames() => return type is enum
+5.startAsync(req,res) =>returns the AsyncContext which converts servlet to asynchronous mode
+
+Response object in servlet
+============================
+1.getParameter() 
+
+
+multipart data
+-----------------
+public Collection<Part> getParts()
+public Part getPart(String name)
+
+streamdata
+-----------------
+getInputStream()
+
+Attributes
+==============================
+setAttribute()
+getAttributes()
+getAttributeNames() => return type is enum
+
+
+requestpathelements
+===============================
+getPathInfo()    =>return type is string
+getContextPath() =>return type is string
+getServletPath() =>return type is String
+
+URI=getContextPath+getServletPath+getPathInfo
+
+PathTranslation methods
+==============================
+1. ServletContext.getRealPath()
+2. ServletRequest.getPathTranslated()

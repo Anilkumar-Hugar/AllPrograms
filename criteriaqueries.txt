@@ -1,0 +1,39 @@
+http://localhost:8080/v2/api-docs
+
+
+
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaUpdate<Organization> update = cb.createCriteriaUpdate(Organization.class);
+Root<Organization> root = update.from(Organization.class);
+// Set the new values for the organization
+update.set(root.get("name"), "New Organization Name");
+update.set(root.get("version"), 2);
+// Specify the organization to update based on its id
+Predicate predicate = cb.equal(root.get("id"), 1L);
+// Add the predicate to the criteria query
+update.where(predicate);
+// Execute the update query
+entityManager.createQuery(update).executeUpdate();
+=======================================================================================
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaUpdate<Organization> update = cb.createCriteriaUpdate(Organization.class);
+Root<Organization> root = update.from(Organization.class);
+// Set the new values for the organization
+update.set(root.get("name"), "New Organization Name");
+update.set(root.get("version"), 2);
+// Specify the organization to update based on its composite keys
+Predicate predicate = cb.and(
+    cb.equal(root.get("id"), 1L),
+    cb.equal(root.get("version"), 1)
+);
+// Add the predicate to the criteria query
+update.where(predicate);
+// Execute the update query
+entityManager.createQuery(update).executeUpdate();
+
+
+
+
+
+implements webmvc
+
